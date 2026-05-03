@@ -4,7 +4,7 @@ export const SITE = {
   profile: "https://github.com/thatboringcoder",
   desc: "A space where curiosity becomes code. Exploring web development, software architecture and everything that makes the tech world spin.",
   title: "Hi!, I'm Suryansh",
-  ogImage: "devosfera-og.webp", // located in the public folder
+  ogImage: "ogimg.webp", // located in the public folder
   lightAndDarkMode: true,
   postPerIndex: 6,
   postPerPage: 12,
@@ -34,10 +34,10 @@ export const SITE = {
   introAudio: {
     enabled: true, // show/hide intro player in home and compact player while navigating
     // src: path to file (relative to /public or absolute URL). Example: "/intro.mp3" or "https://example.com/stream"
-    src: "https://www.epidemicsound.com/music/tracks/877a365c-5acd-4e9f-a41d-ebb674dc2464/",
-    // src: "/audio/intro-web.mp3",
+    // src: "https://pixabay.com/music/solo-piano-piano-background-487020/",
+     src: "/audio/the_mountain-piano-background-487020.mp3",
     isStream: true, // true for radio/live stream URLs (example: https://fluxfm.streamabc.net/flx-chillhop-mp3-128-8581707)
-    label: "LOFI", // display label in player
+    label: "Piano", // display label in player
     duration: 30, // duration in seconds (used for local files, ignored on streams)
   },
 } as const;
