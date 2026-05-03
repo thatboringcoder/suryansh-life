@@ -1,7 +1,7 @@
 import type { Props } from "astro";
 import IconMail from "@/assets/icons/IconMail.svg";
 import IconGitHub from "@/assets/icons/IconGitHub.svg";
-import IconBrandX from "@/assets/icons/IconBrandX.svg";
+import IconBluesky from "@/assets/icons/IconBluesky.svg";
 import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
 import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
 import IconFacebook from "@/assets/icons/IconFacebook.svg";
@@ -19,37 +19,31 @@ interface Social {
 export const SOCIALS: Social[] = [
   {
     name: "GitHub",
-    href: "https://github.com/0xdres/",
+    href: "https://github.com/thatboringcoder/",
     linkTitle: `${SITE.title} en GitHub`,
     icon: IconGitHub,
   },
   {
-    name: "X",
-    href: "https://x.com/avdyen",
-    linkTitle: `${SITE.title} en X`,
-    icon: IconBrandX,
+    name: "Bluesky",
+    href: "https://bsky.app/profile/suryansh.life",
+    linkTitle: `${SITE.title} en Bluesky`,
+    icon: IconBluesky,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/avdyan/",
+    href: "https://www.linkedin.com/in/suryansh5494/",
     linkTitle: `${SITE.title} en LinkedIn`,
     icon: IconLinkedin,
   },
   {
     name: "Mail",
-    href: "mailto:andres04u@gmail.com",
+    href: "mailto:suryansh02973@gmail.com",
     linkTitle: `Envia un correo a ${SITE.title}`,
     icon: IconMail,
   },
 ] as const;
 
 export const SHARE_LINKS: Social[] = [
-  {
-    name: "WhatsApp",
-    href: "https://wa.me/?text=",
-    linkTitle: `Envia este post por WhatsApp`,
-    icon: IconWhatsapp,
-  },
   {
     name: "Facebook",
     href: "https://www.facebook.com/sharer.php?u=",

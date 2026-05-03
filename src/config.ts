@@ -1,7 +1,7 @@
 export const SITE = {
-  website: "https://devosfera.vercel.app/",
-  author: "Andrés Ujpán",
-  profile: "https://github.com/0xdres",
+  website: "https://suryansh.life/",
+  author: "Suryansh",
+  profile: "https://github.com/thatboringcoder",
   desc: "A space where curiosity becomes code. Exploring web development, software architecture and everything that makes the tech world spin.",
   title: "Astro Devosfera",
   ogImage: "devosfera-og.webp", // located in the public folder
