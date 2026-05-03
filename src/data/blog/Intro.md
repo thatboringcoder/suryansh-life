@@ -1,7 +1,6 @@
 ---
 author: "Suryansh"
-pubDatetime: 2026-05-03T23:28:55.000-06:00
-modDatetime:
+pubDatetime: 2026-05-04T00:27:55.000-06:00
 title: "Intro"
 featured: true
 draft: false
