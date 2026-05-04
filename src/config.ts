@@ -1,9 +1,9 @@
 export const SITE = {
   website: "https://suryansh.life/",
-  author: "Suryansh",
+  author: "Suryansh-Life",
   profile: "https://github.com/thatboringcoder",
-  desc: "A space where curiosity becomes code. Exploring web development, software architecture and everything that makes the tech world spin.",
-  title: "Hi!, I'm Suryansh",
+  desc: "My personal digital space where i share my work and thoughts.",
+  title: "Suryansh",
   ogImage: "ogimg.webp", // located in the public folder
   lightAndDarkMode: true,
   postPerIndex: 6,
@@ -15,7 +15,7 @@ export const SITE = {
   showBackButton: true, // show back button in post detail
   heroTerminalPrompt: {
     prefix: "~", // highlighted part on the left
-    path: "/ready-to-go", // central prompt text
+    path: "/home/suryansh", // central prompt text
     suffix: "$", // terminal symbol on the right
   },
   backdropEffects: {
@@ -35,9 +35,9 @@ export const SITE = {
     enabled: true, // show/hide intro player in home and compact player while navigating
     // src: path to file (relative to /public or absolute URL). Example: "/intro.mp3" or "https://example.com/stream"
     // src: "https://pixabay.com/music/solo-piano-piano-background-487020/",
-     src: "/audio/the_mountain-piano-background-487020.mp3",
+     src: "/audio/nastelbom-intro-intro-theme-513425.mp3",
     isStream: true, // true for radio/live stream URLs (example: https://fluxfm.streamabc.net/flx-chillhop-mp3-128-8581707)
-    label: "Piano", // display label in player
+    label: "Lo-FI", // display label in player
     duration: 30, // duration in seconds (used for local files, ignored on streams)
   },
 } as const;
