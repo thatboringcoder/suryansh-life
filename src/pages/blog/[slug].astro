@@ -1,0 +1,28 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={post.data.title} description={post.data.summary}>
+  <article class="mx-auto max-w-2xl px-6 pt-32 pb-20">
+    <p class="font-mono text-ink-soft text-xs uppercase tracking-wide">
+      {post.data.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+    </p>
+    <h1 class="font-display text-ink text-4xl font-medium mt-3">{post.data.title}</h1>
+
+    <div class="prose prose-invert mt-10">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

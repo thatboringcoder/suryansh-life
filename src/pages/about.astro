@@ -1,0 +1,44 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Button from '@/components/Button.astro';
+import { SITE } from '@/site.config';
+
+const skills = ['C++', 'ML', 'QML', 'Astro', 'KDE', 'DSA'];
+---
+
+<BaseLayout title="About" description={`A bit about ${SITE.name} and how they work.`}>
+  <section class="mx-auto max-w-3xl px-6 pt-16 pb-24 sm:pt-24">
+    <p class="text-ink-soft mb-6 font-mono text-xs tracking-[0.2em] uppercase">About</p>
+
+    <h1 class="font-display text-ink max-w-xl text-3xl font-medium sm:text-4xl">
+      {SITE.role}.
+    </h1>
+
+    <div class="prose prose-sm sm:prose-base mt-8 max-w-xl">
+      <p>
+        Hi! I am Suryansh, currently studying CSE at KIIT, Bhubaneswar (2nd year currently). I am just following my interests and see where they take me.
+      </p>
+      <p>
+        Right now I am trying to learn ML, QML, Web Dev and practice DSA. Expert in none but i can say trying to do better each day.I will follow up my findings and my thoughts in this website as uch as i can.
+      </p>
+      <p>
+        Well that ends the about section, not much to say about me. Maybe in the future more to tell.
+      </p>
+    </div>
+
+    <div class="mt-10">
+      <p class="text-ink-soft mb-3 font-mono text-xs tracking-[0.2em] uppercase">Skills</p>
+      <ul class="flex flex-wrap gap-2">
+        {
+          skills.map((skills) => (
+            <li class="border-line text-ink-soft rounded-full border px-3 py-1 font-mono text-xs">
+              {skills}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <Button href={`mailto:${SITE.email}`} class="mt-10">Get in touch</Button>
+  </section>
+</BaseLayout>

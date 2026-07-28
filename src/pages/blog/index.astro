@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import { SITE } from '@/site.config';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const sorted = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout title={`Blog — ${SITE.name}`}>
+  <section class="mx-auto max-w-3xl px-6 pt-32 pb-20">
+    <SectionHeading eyebrow="Blog" count={sorted.length} />
+
+    <div>
+      {sorted.map((post) => (
+     <a
+          href={`/blog/${post.id}`}
+          class="group block border-b border-line py-6 first:border-t"
+        >
+          <div class="flex items-baseline justify-between gap-4">
+            <h2 class="font-display text-ink text-lg font-medium group-hover:text-signal transition-colors">
+              {post.data.title}
+            </h2>
+            <span class="font-mono text-ink-soft text-xs shrink-0">
+              {post.data.date.toLocaleDateString('en-US', { month: '2-digit', year: 'numeric' })}
+            </span>
+          </div>
+          <p class="text-ink-soft mt-1">{post.data.summary}</p>
+        </a>
+      ))}
+
+      {sorted.length === 0 && (
+        <p class="text-ink-soft py-6">No posts yet — check back soon.</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>
