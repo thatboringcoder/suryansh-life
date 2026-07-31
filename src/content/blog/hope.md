@@ -1,7 +1,7 @@
 ---
 title: 'Clearing some things'
 summary: 'Clearing some things from my mind.'
-date: 2026-07-28
+date: 2026-07-31
 tags: ['meta']
 draft: false
 ---
