@@ -6,7 +6,7 @@ import cloudflare from '@astrojs/cloudflare';
 
 // Replace with your production URL after deploying to Vercel / Netlify.
 // It powers the sitemap and the canonical / Open Graph URLs in BaseLayout.
-const SITE_URL = 'https://astro-starter-portfolio.vercel.app';
+const SITE_URL = 'https://suryansh.life';
 
 export default defineConfig({
   adapter: cloudflare({

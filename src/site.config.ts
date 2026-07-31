@@ -2,9 +2,9 @@
 // and SEO defaults all read from here instead of hardcoding copy.
 export const SITE = {
   name: 'Suryansh',
-  role: 'Product design & frontend engineering',
+  role: 'Wanderer',
   email: 'suryansh.endless@gmail.com',
-  tagline: 'I just do whatever i like.',
+  tagline: 'Just finding my calling.',
   description:
     'Portfolio of Suryansh — ',
   status: 'Currently a student at KIIT, BBSR. Open to Work.',
