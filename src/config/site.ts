@@ -69,15 +69,15 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  title: 'Minrock',
-  tagline: 'Raw ideas from your personal vault, finely polished into an ultra-fast static blog.',
-  description: 'Minimalist, typography-first Astro 7 theme crafted for technical writers and Obsidian vaults. Pure SSG, zero bloat.',
-  author: 'Renato Rezende',
+  title: 'Suryansh',
+  tagline: 'Personal Website',
+  description: 'My own personal space to express my ideas.',
+  author: 'Suryansh',
   // Substitua pelo seu domínio de produção (usado para SEO Canônico, OpenGraph e RSS)
   // Replace with your production domain (used for Canonical SEO, OpenGraph and RSS feeds)
   // Can be overridden via environment variable (e.g. Vercel: SITE_URL=https://yourdomain.com)
   siteUrl: (typeof process !== 'undefined' && process.env?.SITE_URL) || (import.meta as any).env?.SITE_URL || 'https://minrock.vercel.app',
-  defaultTheme: 'cream',
+  defaultTheme: 'midnight',
   // Granular Feature Flags — "Complete by default, minimalist on demand"
   // Toggle any feature to false to completely omit markup & scripts in static build
   features: {
@@ -93,9 +93,9 @@ export const siteConfig: SiteConfig = {
     comments: true
   },
   socialLinks: {
-    github: 'https://github.com/rnt-rez/minrock',
-    linkedin: 'https://example.com/',
-    email: 'https://example.com/'
+    github: 'https://github.com/thatboringcoder',
+    linkedin: 'https://linkedin.com/in/suryansh5494',
+    email: 'https://suryansh.endless@gmail.com/'
   },
   navLinks: [
     { title: 'Home', href: '/' },
@@ -107,7 +107,7 @@ export const siteConfig: SiteConfig = {
   comments: {
     enabled: true,
     provider: 'scatterleaf',
-    repo: 'rnt-rez/minrock',
+    repo: 'thatboringcoder/suryansh-life',
     category: 'General',
     theme: 'auto',
     lang: 'auto',
