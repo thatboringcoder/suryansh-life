@@ -1,7 +1,7 @@
-
+---
 title: "Resisting the urge to change themes and writing more regularly"
 description: "Why do i keep changing themes?"
-pubDate: 2026-09-16
+pubDate: 2026-10-07
 tags: ["yap"]
 draft: false
 ---
