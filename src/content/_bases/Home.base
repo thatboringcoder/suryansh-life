@@ -1,11 +1,15 @@
 filters:
-  and:
+  or:
     - file.ext == "md"
+    - file.ext == "mdx"
 formulas:
   Slug: |-
-    if(file.folder.startsWith("blog"), "/blog/" + file.name.replace(".md", ""),
-      if(file.folder.startsWith("projects"), "/projects/" + file.name.replace(".md", ""),
-        "/" + file.folder))
+    if(file.folder == "posts", "/posts/" + file.name.replace(".md", ""), 
+      if(file.folder == "pages", "/" + file.name.replace(".md", ""), 
+        if(file.folder == "special", if(file.name.replace(".md", "") == "home", "/", "/" + file.name.replace(".md", "")), 
+          if(file.folder == "projects", "/projects/" + file.name.replace(".md", ""), 
+            if(file.folder == "docs", "/docs/" + file.name.replace(".md", ""), 
+              "/" + file.folder)))))
   Content Folder: |-
     if(file.name == "index",
       if(file.folder != "",
@@ -33,73 +37,58 @@ properties:
     displayName: Description
   note.draft:
     displayName: Draft
-  note.image:
-    displayName: Image
   note.pubDate:
-    displayName: PubDate
-  note.tags:
-    displayName: Tags
+    displayName: Date
   note.title:
     displayName: Title
 views:
   - type: cms
-    name: Blog
+    name: Guides
     filters:
       and:
-        - file.folder.startsWith("blog")
-    order: []
+        - file.folder.startsWith("docs/guides")
     sort:
-      - property: pubDate
+      - property: file.ctime
         direction: DESC
-    fallbackToEmbeds: never
-    propertyDisplay1: note.pubDate
-    showTextPreview: true
     imageFormat: cover
-    imageProperty: note.image
     showDate: true
-    showDraftStatus: true
-    draftStatusProperty: note.draft
+    customizeNewButton: true
+    newNoteLocation: docs/guides
+    fallbackToEmbeds: if-empty
+    propertyDisplay1: file.fullname
+    showTextPreview: true
     propertyLabels: above
     titleProperty: note.title
-    propertyLayout12SideBySide: false
-    propertyLayout34SideBySide: false
-    showTags: true
-    tagsProperty: note.tags
-    customizeNewButton: true
-    newNoteLocation: blog
-    cardSize: 250
-    imageAspectRatio: 0.55
-    maxTagsToShow: 3
-    dateIncludeTime: false
+    dateProperty: file.ctime
     descriptionProperty: note.description
-    hideQuickEditIcon: false
+    showTags: false
+    showDraftStatus: false
   - type: cms
-    name: Projects
+    name: Reference
     filters:
       and:
-        - file.folder.startsWith("projects")
-    order: []
+        - file.folder.startsWith("docs/reference")
     sort:
-      - property: date
+      - property: file.ctime
         direction: DESC
-    fallbackToEmbeds: never
-    propertyDisplay1: note.date
-    showTextPreview: true
-    imageFormat: none
+    imageFormat: cover
     showDate: true
-    showDraftStatus: false
+    customizeNewButton: true
+    newNoteLocation: docs/reference
+    fallbackToEmbeds: if-empty
+    propertyDisplay1: file.fullname
+    showTextPreview: true
     propertyLabels: above
     titleProperty: note.title
-    showTags: true
-    tagsProperty: note.tags
-    customizeNewButton: true
-    newNoteLocation: projects
-    cardSize: 250
+    dateProperty: file.ctime
     descriptionProperty: note.description
+    showTags: false
+    showDraftStatus: false
   - type: cms
     name: Vault CMS Guide
     filters:
       and:
+        - file.folder == "/"
         - file.name.endsWith("GUIDE")
     order: []
     sort:
@@ -113,6 +102,14 @@ views:
     showDraftStatus: false
     propertyLabels: above
     titleProperty: note.title
+    propertyLayout12SideBySide: false
+    propertyLayout34SideBySide: false
     showTags: false
+    customizeNewButton: false
+    newNoteLocation: ""
     cardSize: 250
+    imageAspectRatio: 0.55
+    maxTagsToShow: 2
+    dateIncludeTime: false
     descriptionProperty: note.description
+    hideQuickEditIcon: true

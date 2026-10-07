@@ -72,6 +72,9 @@ var import_obsidian = require("obsidian");
 var DisableTabsSettingTab = class extends import_obsidian.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
+    // Shown beside the plugin name in settings search results (1.13) and in the
+    // settings sidebar on older Obsidian (SettingTab.icon).
+    this.icon = "lucide-panel-top-dashed";
     this.plugin = plugin;
     this.settings = plugin.settings;
   }
@@ -147,3 +150,5 @@ var DisableTabsPlugin = class extends import_obsidian2.Plugin {
     this.doc.body.classList.remove("disable-tabs-hide-mobile-icon");
   }
 };
+
+/* nosourcemap */

@@ -2,7 +2,7 @@
   "showInlineTitle": false,
   "promptDelete": true,
   "showIndentGuide": false,
-  "attachmentFolderPath": "./",
+  "attachmentFolderPath": "./attachments",
   "userIgnoreFilters": [
     "dist",
     "node_modules/"
@@ -38,7 +38,7 @@
     "editor:configure-toolbar"
   ],
   "newFileLocation": "folder",
-  "newFileFolderPath": "blog",
+  "newFileFolderPath": "docs/guides",
   "newLinkFormat": "relative",
   "mobileQuickRibbonItem": "",
   "vimMode": false,

@@ -15,14 +15,45 @@
               "type": "bases",
               "state": {
                 "file": "_bases/Home.base",
-                "viewName": "Blog"
+                "viewName": "Guides"
               },
               "pinned": true,
               "icon": "lucide-home",
               "title": "Home"
             }
+          },
+          {
+            "id": "627bee8909ed944a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/Start/index.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          },
+          {
+            "id": "1ab6fcc58d14382a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/guides/Untitled 1.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 1"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -47,7 +78,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de arquivos"
+              "title": "Files"
             }
           },
           {
@@ -133,12 +164,12 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "astro-composer:Edit Astro config": false,
-      "switcher:Abrir a troca rápida": false,
-      "command-palette:Abrir paleta de comandos": false,
-      "bases:Criar nova base": false,
+      "switcher:Open quick switcher": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
       "seo:Open SEO audit panel": false,
       "astro-composer:Open project terminal": false,
+      "astro-composer:Edit Astro config": false,
       "home-base:Open home base": false,
       "obsidian-git:Open Git source control": false,
       "zenmode:Toggle zen mode": false,
@@ -146,9 +177,16 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "1ab6fcc58d14382a",
   "lastOpenFiles": [
+    "blog/Start/index.md",
+    "docs/guides/Untitled 1.md",
+    "docs/guides/checking.md",
+    "docs/guides/Untitled.md",
     "_bases/Home.base",
+    "docs/guides",
+    "docs",
+    "Untitled.md",
     "blog/getting-started-with-minrock/index.md",
     "blog/obsidian-vault-guide/index.md",
     "blog/writing-technical-articles/index.md"

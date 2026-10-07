@@ -7007,3 +7007,5 @@ var BasesCMSPlugin = class extends import_obsidian24.Plugin {
     }, this.settings.embeddedViewRefreshDebounceMs);
   }
 };
+
+/* nosourcemap */

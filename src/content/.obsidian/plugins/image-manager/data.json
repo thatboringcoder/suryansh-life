@@ -15,7 +15,7 @@
   "enablePropertyPaste": true,
   "propertyLinkFormat": "obsidian",
   "customPropertyLinkFormat": "{image-url}",
-  "defaultPropertyName": "image",
+  "defaultPropertyName": "banner",
   "defaultIconPropertyName": "icon",
   "altTextProperty": "",
   "autoConvertRemoteImages": false,
@@ -34,17 +34,14 @@
   "appendReferral": false,
   "banner": {
     "properties": {
-      "imageProperty": "image",
-      "iconProperty": "icon",
-      "hidePropertyEnabled": false,
-      "hideProperty": ""
+      "imageProperty": "banner",
+      "iconProperty": "icon"
     },
     "desktop": {
       "enabled": true,
       "height": 240,
       "viewOffset": 0,
       "noteOffset": -32,
-      "bannerRadiusEnabled": false,
       "borderRadius": [
         8,
         8,
@@ -53,7 +50,6 @@
       ],
       "padding": 8,
       "fade": true,
-      "animation": false,
       "iconEnabled": false,
       "iconSize": 96,
       "iconRadius": 8,
@@ -70,7 +66,6 @@
       "height": 190,
       "viewOffset": 0,
       "noteOffset": -32,
-      "bannerRadiusEnabled": false,
       "borderRadius": [
         8,
         8,
@@ -79,7 +74,6 @@
       ],
       "padding": 8,
       "fade": true,
-      "animation": false,
       "iconEnabled": false,
       "iconSize": 96,
       "iconRadius": 8,
@@ -96,7 +90,6 @@
       "height": 160,
       "viewOffset": 0,
       "noteOffset": -32,
-      "bannerRadiusEnabled": false,
       "borderRadius": [
         8,
         8,
@@ -105,7 +98,6 @@
       ],
       "padding": 8,
       "fade": true,
-      "animation": false,
       "iconEnabled": false,
       "iconSize": 56,
       "iconRadius": 8,

@@ -4950,3 +4950,5 @@ var ImageManagerPlugin = class extends import_obsidian15.Plugin {
     }
   }
 };
+
+/* nosourcemap */

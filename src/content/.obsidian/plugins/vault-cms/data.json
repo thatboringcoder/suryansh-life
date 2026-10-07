@@ -3,49 +3,47 @@
   "configFilePath": "../../astro.config.mjs",
   "contentTypes": [
     {
-      "id": "content-type-minrock-blog",
-      "name": "Blog",
-      "folder": "blog",
-      "fileOrganization": "folder",
-      "enabled": true,
-      "indexFileName": "index",
-      "linkBasePath": "/blog/"
+      "id": "content-type-1773432670507-xob1karx2",
+      "name": "Docs",
+      "folder": "docs",
+      "fileOrganization": "file",
+      "enabled": false,
+      "indexFileName": "index"
     },
     {
-      "id": "content-type-minrock-projects",
-      "name": "Projects",
-      "folder": "projects",
-      "fileOrganization": "folder",
+      "id": "content-type-1773432715446-aa4ni0ahu",
+      "name": "Guides",
+      "folder": "docs/guides",
+      "fileOrganization": "file",
       "enabled": true,
       "indexFileName": "index",
-      "linkBasePath": "/projects/"
+      "linkBasePath": "/docs/guides/"
+    },
+    {
+      "id": "content-type-1773432726664-0vqrjh6zp",
+      "name": "Reference",
+      "folder": "docs/reference",
+      "fileOrganization": "file",
+      "enabled": true,
+      "indexFileName": "index",
+      "linkBasePath": "/docs/reference/"
     }
   ],
   "frontmatterProperties": {
-    "content-type-minrock-blog": {
+    "content-type-1773432715446-aa4ni0ahu": {
       "titleProperty": "title",
-      "dateProperty": "pubDate",
       "descriptionProperty": "description",
-      "tagsProperty": "tags",
-      "draftProperty": "draft",
-      "draftLogic": "true-draft",
-      "hasDraftStatus": true,
-      "imageProperty": "image",
-      "template": "---\ntitle: \"{{title}}\"\ndescription: \"\"\npubDate: {{date}}\ntags: []\ndraft: false\n---"
-    },
-    "content-type-minrock-projects": {
-      "titleProperty": "title",
-      "dateProperty": "date",
-      "descriptionProperty": "description",
-      "tagsProperty": "tags",
-      "draftProperty": "draft",
-      "draftLogic": "true-draft",
       "hasDraftStatus": false,
-      "imageProperty": "image",
-      "template": "---\ntitle: \"{{title}}\"\ndescription: \"\"\ndate: {{date}}\ncategory: \"Open Source\"\ntags: []\nemoji: \"🚀\"\nrepoUrl: \"\"\ndemoUrl: \"\"\nfeatured: false\n---"
+      "template": "---\ntitle: \"{{title}}\"\ndescription: \"\"\n---\n"
+    },
+    "content-type-1773432726664-0vqrjh6zp": {
+      "titleProperty": "title",
+      "descriptionProperty": "description",
+      "hasDraftStatus": false,
+      "template": "---\ntitle: \"{{title}}\"\ndescription: \"\"\n---\n"
     }
   },
-  "attachmentHandlingMode": "same-folder",
+  "attachmentHandlingMode": "subfolder",
   "preset": "vanilla",
   "presetName": "",
   "presetsRepo": "davidvkimball/vaultcms-presets",
@@ -63,10 +61,8 @@
     "data-files-editor",
     "explorer-focus",
     "file-name-history",
-    "link-as",
-    "omnisearch",
+    "settings-search",
     "tag-wrangler",
-    "vault-nickname",
     "zenmode"
   ],
   "disabledPlugins": [],
@@ -75,34 +71,20 @@
     "views": []
   },
   "astroComposerConfig": {
-    "customContentTypes": [
-      {
-        "id": "content-type-minrock-blog",
-        "name": "Blog",
-        "folder": "blog",
-        "template": "---\ntitle: \"{{title}}\"\ndescription: \"\"\npubDate: {{date}}\ntags: []\ndraft: false\n---",
-        "enabled": true,
-        "linkBasePath": "/blog/",
-        "creationMode": "folder",
-        "indexFileName": "index"
-      }
-    ],
+    "customContentTypes": [],
     "defaultTemplate": "",
-    "configFilePath": "../../astro.config.mjs",
-    "terminalProjectRootPath": "../..",
-    "showMdxFilesInExplorer": false
+    "configFilePath": "",
+    "terminalProjectRootPath": ""
   },
   "seoConfig": {
     "titleProperty": "title",
-    "descriptionProperty": "description",
-    "scanDirectories": "blog",
+    "scanDirectories": "docs/guides,docs/reference",
     "useFilenameAsTitle": false,
     "useFilenameAsSlug": true,
     "enableMDXSupport": false
   },
   "propertyOverFileName": {
-    "propertyKey": "title",
-    "enableMdxSupport": false
+    "propertyKey": "title"
   },
   "imageManager": {
     "enableRenameOnPaste": true,
@@ -121,7 +103,7 @@
     "enablePropertyPaste": true,
     "propertyLinkFormat": "obsidian",
     "customPropertyLinkFormat": "{image-url}",
-    "defaultPropertyName": "image",
+    "defaultPropertyName": "banner",
     "defaultIconPropertyName": "icon",
     "altTextProperty": "",
     "autoConvertRemoteImages": false,
@@ -138,6 +120,84 @@
     "insertReferral": true,
     "insertBackLink": false,
     "appendReferral": false,
+    "banner": {
+      "properties": {
+        "imageProperty": "banner",
+        "iconProperty": "icon"
+      },
+      "desktop": {
+        "enabled": true,
+        "height": 240,
+        "viewOffset": 0,
+        "noteOffset": -32,
+        "borderRadius": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "padding": 8,
+        "fade": true,
+        "iconEnabled": false,
+        "iconSize": 96,
+        "iconRadius": 8,
+        "iconBackground": true,
+        "iconBorder": 2,
+        "iconFrame": true,
+        "iconAlignmentH": "flex-start",
+        "iconAlignmentV": "flex-end",
+        "iconOffsetX": 0,
+        "iconOffsetY": -24
+      },
+      "tablet": {
+        "enabled": true,
+        "height": 190,
+        "viewOffset": 0,
+        "noteOffset": -32,
+        "borderRadius": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "padding": 8,
+        "fade": true,
+        "iconEnabled": false,
+        "iconSize": 96,
+        "iconRadius": 8,
+        "iconBackground": true,
+        "iconBorder": 2,
+        "iconFrame": true,
+        "iconAlignmentH": "flex-start",
+        "iconAlignmentV": "flex-end",
+        "iconOffsetX": 0,
+        "iconOffsetY": -24
+      },
+      "phone": {
+        "enabled": true,
+        "height": 160,
+        "viewOffset": 0,
+        "noteOffset": -32,
+        "borderRadius": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "padding": 8,
+        "fade": true,
+        "iconEnabled": false,
+        "iconSize": 56,
+        "iconRadius": 8,
+        "iconBackground": true,
+        "iconBorder": 2,
+        "iconFrame": true,
+        "iconAlignmentH": "flex-start",
+        "iconAlignmentV": "flex-end",
+        "iconOffsetX": 0,
+        "iconOffsetY": -24
+      }
+    },
     "supportedExtensions": [
       "md",
       "mdx"
@@ -175,27 +235,18 @@
     "hideReleaseNotes": false,
     "stickyIconReplaceTab": false
   },
-  "explorerFocus": {
-    "showRightClickMenu": true,
-    "showFileExplorerIcon": true,
-    "focusLevel": "parent",
-    "hideAncestorFolders": false
-  },
+  "explorerFocus": {},
   "ignoreConfig": {
-    "gitIgnoreConfigured": true,
-    "viteIgnoreConfigured": true
+    "gitIgnoreConfigured": false,
+    "viteIgnoreConfigured": false
   },
   "gitConfig": {
-    "enabled": true,
-    "isPrivate": true,
+    "enabled": false,
+    "isPrivate": false,
     "branchName": "main",
-    "autoConfigureObsidianGit": true,
-    "repoName": "minrock"
+    "autoConfigureObsidianGit": false
   },
-  "deploymentPlatform": "vercel",
-  "resolvePublicImages": true,
   "runWizardOnStartup": false,
   "wizardCompleted": true,
-  "enableMdxSupport": false,
-  "defaultContentTypeId": "content-type-minrock-blog"
+  "enableMdxSupport": true
 }

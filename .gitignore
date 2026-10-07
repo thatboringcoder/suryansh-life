@@ -31,3 +31,8 @@ Thumbs.db
 PROGRESS.md
 AGENTS.md
 .agents/
+
+# Vault CMS / Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.ref/

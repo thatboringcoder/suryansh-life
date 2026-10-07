@@ -5062,3 +5062,5 @@ var AstroComposerPlugin = class extends import_obsidian14.Plugin {
     }
   }
 };
+
+/* nosourcemap */

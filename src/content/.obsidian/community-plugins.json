@@ -4,20 +4,19 @@
   "oxygen-settings",
   "vault-cms",
   "astro-composer",
+  "settings-search",
   "editing-toolbar",
   "image-manager",
   "bases-cms",
   "home-base",
   "obsidian-git",
   "zenmode",
-  "tag-wrangler",
   "explorer-focus",
   "ui-tweaker",
   "obsidian42-brat",
   "omnisearch",
-  "data-files-editor",
   "file-name-history",
   "nested-properties",
   "vault-nickname",
-  "link-as"
+  "data-files-editor"
 ]

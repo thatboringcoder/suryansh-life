@@ -583,3 +583,5 @@ var FileNameHistoryPlugin = class extends import_obsidian3.Plugin {
     this.debounceMap.set(newFile.path, entry);
   }
 };
+
+/* nosourcemap */

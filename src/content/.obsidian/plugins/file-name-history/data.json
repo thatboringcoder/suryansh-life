@@ -1,5 +1,5 @@
 {
-  "historyPropertyName": "aliases",
+  "historyPropertyName": "history",
   "ignoreRegexes": [
     "^_",
     "^Untitled$",
@@ -11,8 +11,9 @@
   "includeFolders": [],
   "excludeFolders": [],
   "fileExtensions": [
-    "md"
+    "md",
+    "mdx"
   ],
-  "trackFolderRenames": "index",
+  "trackFolderRenames": "",
   "excludePropertyName": ""
 }

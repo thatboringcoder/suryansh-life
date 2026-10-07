@@ -34,9 +34,9 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// node_modules/.pnpm/obsidian-daily-notes-interf_8d9fc24b0fc622d94fd11fa5e9b185b3/node_modules/obsidian-daily-notes-interface/dist/main.js
+// node_modules/.pnpm/obsidian-daily-notes-interface@0.9.4_@codemirror+state@6.5.0_@codemirror+view@6.38.6/node_modules/obsidian-daily-notes-interface/dist/main.js
 var require_main = __commonJS({
-  "node_modules/.pnpm/obsidian-daily-notes-interf_8d9fc24b0fc622d94fd11fa5e9b185b3/node_modules/obsidian-daily-notes-interface/dist/main.js"(exports) {
+  "node_modules/.pnpm/obsidian-daily-notes-interface@0.9.4_@codemirror+state@6.5.0_@codemirror+view@6.38.6/node_modules/obsidian-daily-notes-interface/dist/main.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var obsidian = require("obsidian");
@@ -4453,3 +4453,5 @@ var HomeBasePlugin = class extends import_obsidian11.Plugin {
   // "Open when empty" feature removed - redundant with "New tab replacement: only when empty"
   // Since Obsidian auto-creates an empty tab when you close the last one, they do the same thing
 };
+
+/* nosourcemap */

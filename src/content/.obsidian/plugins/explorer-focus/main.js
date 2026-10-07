@@ -905,3 +905,5 @@ var ExplorerFocusPlugin = class extends import_obsidian5.Plugin {
   }
 };
 var main_default = ExplorerFocusPlugin;
+
+/* nosourcemap */
