@@ -6,7 +6,6 @@ category: "Machine Learning"
 tags: ["pytorch", "model"]
 stars: 0
 repoUrl: "https://github.com/suryansh-life/dear-van-gogh"
-demoUrl: "https://minrock.vercel.app"
 emoji: ":)"
 featured: true
 ---

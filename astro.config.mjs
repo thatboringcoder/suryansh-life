@@ -4,7 +4,7 @@ import { satteri } from '@astrojs/markdown-satteri';
 import { rehypeCallouts } from './src/plugins/rehype-callouts.mjs';
 
 export default defineConfig({
-  site: 'https://minrock.vercel.app',
+  site: 'https://suryansh.life',
   integrations: [sitemap()],
   prefetch: {
     prefetchAll: true,

@@ -76,7 +76,7 @@ export const siteConfig: SiteConfig = {
   // Substitua pelo seu domínio de produção (usado para SEO Canônico, OpenGraph e RSS)
   // Replace with your production domain (used for Canonical SEO, OpenGraph and RSS feeds)
   // Can be overridden via environment variable (e.g. Vercel: SITE_URL=https://yourdomain.com)
-  siteUrl: (typeof process !== 'undefined' && process.env?.SITE_URL) || (import.meta as any).env?.SITE_URL || 'https://minrock.vercel.app',
+  siteUrl: (typeof process !== 'undefined' && process.env?.SITE_URL) || (import.meta as any).env?.SITE_URL || 'https://suryansh.life',
   defaultTheme: 'midnight',
   // Granular Feature Flags — "Complete by default, minimalist on demand"
   // Toggle any feature to false to completely omit markup & scripts in static build
@@ -90,22 +90,21 @@ export const siteConfig: SiteConfig = {
     themeSwitcher: true,
     backToTop: true,
     imageZoom: true,
-    comments: true
+    comments: false
   },
   socialLinks: {
     github: 'https://github.com/thatboringcoder',
-    linkedin: 'https://linkedin.com/in/suryansh5494',
-    email: 'https://suryansh.endless@gmail.com/'
+    linkedin: 'https://linkedin.com/in/suryansh5494'
   },
   navLinks: [
     { title: 'Home', href: '/' },
     { title: 'Blog', href: '/blog' },
-    { title: 'Projects', href: '/projects' },
+    { title: 'Work', href: '/projects' },
     { title: 'Tags', href: '/tags' },
     { title: 'About', href: '/about' }
   ],
   comments: {
-    enabled: true,
+    enabled: false,
     provider: 'scatterleaf',
     repo: 'thatboringcoder/suryansh-life',
     category: 'General',
