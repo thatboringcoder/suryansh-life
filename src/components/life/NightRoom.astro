@@ -1,0 +1,6 @@
+---
+const { mode = 'journal' } = Astro.props;
+---
+<div class:list={['room-art', `room-art--${mode}`]} aria-hidden="true">
+  <img src="/art/night/room.webp" alt="" width="1448" height="1086" decoding="async" />
+</div>

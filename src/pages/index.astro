@@ -2,5 +2,28 @@
 import LifeLayout from '../layouts/LifeLayout.astro';
 const schools=['Chiranjeeve','Oxford','Sarala Birla','KIIT'];
 ---
-<LifeLayout home><section class="journey" aria-label="My journey through four schools"><div class="world"><canvas class="scene" aria-hidden="true"></canvas><div class="intro"><div class="eyebrow">A life in progress</div><h1>A little lost.<br/>Always <em>curious.</em></h1><p>I'm Suryansh. This is my little corner of the internet.<br/>Some thoughts, some things I make,<br/>and the places that made me.</p></div><div class="chapter-caption" aria-live="polite"><small id="chapter-number">CHAPTER 01 · THE BEGINNING</small><h2 id="chapter-name">Chiranjeeve School</h2><p id="chapter-description">Every journey starts somewhere.<br/>Mine started here.</p></div><div class="walker" aria-hidden="true"></div><div class="end-note">Still walking. Still figuring it out.</div><div class="journey-bottom"><div class="scroll-note"><span>↓</span><div>SCROLL TO WANDER<br/><small>or use your ← → keys</small></div></div><nav class="chapter-nav" aria-label="Journey chapters">{schools.map((s,i)=><button data-chapter={i} aria-pressed={i===0} aria-label={`Walk to ${s}`}><b>0{i+1}</b>{s}</button>)}</nav><div class="arrows"><button id="previous" aria-label="Previous school">←</button><button id="next" aria-label="Next school">→</button></div></div></div></section><noscript><div class="room"><h2>The places that made me</h2><p>Chiranjeeve School → Oxford Public School → Sarala Birla Public School → KIIT</p><a href="/blog/">Read my thoughts →</a></div></noscript></LifeLayout>
+<LifeLayout home title="Suryansh — after the lights go out">
+  <section class="journey" aria-label="A night walk through the places that made me">
+    <div id="night-game" class="scene" aria-hidden="true"></div>
+    <div class="night-vignette" aria-hidden="true"></div>
+    <div class="intro">
+      <div class="eyebrow">A life, remembered after dark</div>
+      <h1>Some places<br/>never <em>leave you.</em></h1>
+      <p>I'm Suryansh. Walk with me through the quiet.<br/>The places that made me are still here.<br/>You just have to get a little closer.</p>
+      <button id="begin" class="begin" disabled>Enter the night <span>→</span></button>
+      <span class="begin-note">Headphones recommended · sound is optional</span>
+    </div>
+    <div class="chapter-caption" aria-live="polite" aria-atomic="true">
+      <small id="chapter-number"></small><h2 id="chapter-name"></h2><p id="chapter-description"></p>
+    </div>
+    <div class="end-note">There is more beyond the trees.<br/><a href="/blog/">Read the journal ↗</a><a href="/projects/">Visit the workroom ↗</a></div>
+    <div class="journey-bottom">
+      <div class="scroll-note">HOLD ← → OR A / D TO WALK<small>Scroll to wander · Esc or tap the scene to stop</small></div>
+      <nav class="chapter-nav" aria-label="Walk to a memory">{schools.map((s,i)=><button data-chapter={i} aria-pressed="false"><b>0{i+1}</b><span>{s}</span></button>)}</nav>
+      <div class="walk-controls" aria-label="Walking controls"><button data-walk="-1" aria-label="Hold to walk left">←</button><button data-walk="1" aria-label="Hold to walk right">→</button></div>
+    </div>
+    <p id="game-status" class="game-status" role="status">Finding the path…</p>
+  </section>
+  <noscript><div class="room"><h1>The places that made me</h1><p>Chiranjeeve School → Oxford Public School → Sarala Birla Public School → KIIT.</p><a href="/blog/">Read the journal →</a></div></noscript>
+</LifeLayout>
 <script src="../scripts/journey.ts"></script>
